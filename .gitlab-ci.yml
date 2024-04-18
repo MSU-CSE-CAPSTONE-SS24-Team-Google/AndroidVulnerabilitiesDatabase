@@ -1,0 +1,19 @@
+# https://medium.com/google-cloud/deploy-to-cloud-run-using-gitlab-ci-e056685b8eeb
+image: google/cloud-sdk
+
+stages:
+  - deploy
+
+deploy:
+  stage: deploy
+  only:
+    - disable
+  script:
+    - echo $CLOUD_BUILD_SERVICE_ACCOUNT > /tmp/gcloud-service-key.json # Google Cloud service accounts
+    - gcloud auth activate-service-account --key-file gcloud-service-key.json
+    - gcloud config set project $GCP_PROJECT_ID
+    - gcloud builds submit . --config=cloudbuild.yaml
+
+# https://www.youtube.com/watch?v=p_r-zSz8PAA
+after_script:
+  - rm /tmp/gcloud-service-key.json

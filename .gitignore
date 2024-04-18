@@ -1,0 +1,14 @@
+# for any file that was in root directory prior to 1/25 that you want git to ignore: 
+# run the command: git rm --cache FILENAME
+
+# ignore data files
+*.json
+*.csv
+.venv
+*.pyc
+node_modules/
+
+
+**/*.json
+!vulnerability-database-frontend/*.json
+!flask_app/*json

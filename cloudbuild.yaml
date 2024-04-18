@@ -1,0 +1,61 @@
+# https://medium.com/google-cloud/deploy-to-cloud-run-using-gitlab-ci-e056685b8eeb
+steps:
+  # build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'gcr.io/solid-gamma-411111/test', '.' ]
+  # push the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'push', 'gcr.io/solid-gamma-411111/test']
+  # deploy to Cloud Run
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ['run', 'deploy', 'flask-cicd-test', '--image', 'gcr.io/solid-gamma-411111/test', '--region', 'us-central1', '--platform', 'managed', '--allow-unauthenticated', '--memory', '1Gi']
+  # deploy functions 
+  # deploy merge
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: 
+      - functions
+      - deploy
+      - asb-nvd-data-merge
+      - --source=./data_merge/
+  # deploy nvd extract
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: 
+      - functions
+      - deploy
+      - nvd-extract
+      - --source=./nvd_data_extract/
+  # deploy nvd transform
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: 
+      - functions
+      - deploy
+      - nvd-transform-load
+      - --source=./nvd_data_transform/
+  # deploy logger
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: 
+      - functions
+      - deploy
+      - etl-logger
+      - --source=./etl_logger/
+  # deploy asb load
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - functions
+      - deploy
+      - asb-load
+      - --source=./asb_data_upload/
+  # deploy asb extract
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - functions
+      - deploy
+      - asb-web-extract
+      - --source=./webscraper/
+  # deploy update_cycle
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      - functions
+      - deploy
+      - nvd-cycle-update
+      - --source=./update_cycle/

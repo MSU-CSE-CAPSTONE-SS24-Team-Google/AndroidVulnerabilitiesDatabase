@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "name": "cse498-teamgoogle-ss24",
+  "description": "NOTICE: This product uses the NVD API but is not endorsed or certified by the NVD.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {},
+
+  "type": "commonjs",  
+  "author": "",
+  "license": "ISC"
+}
