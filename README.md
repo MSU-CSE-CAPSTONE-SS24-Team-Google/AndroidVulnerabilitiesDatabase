@@ -76,6 +76,9 @@ Enable OEMs to identify high priority security vulnerabilities​
 
 Easy to use web-application utilizing our API to allow users to query vulnerabilities​
 
+## Project Overview Video
+[![MSU CSE 498 Team Google Capstone Video 2024](https://img.youtube.com/vi/mMjUa4ryW5E/0.jpg)](https://www.youtube.com/watch?v=mMjUa4ryW5E)
+
 
 ## Installation
 Angular Frontend App:
