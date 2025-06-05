@@ -1,0 +1,5 @@
+pymysql
+sqlalchemy>=1.4.*
+cloud-sql-python-connector>=1.6.*
+functions-framework==3.*
+google-cloud-storage>=2.14.*

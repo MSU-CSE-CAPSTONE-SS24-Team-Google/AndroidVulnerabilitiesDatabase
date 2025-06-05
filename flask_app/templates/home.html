@@ -1,0 +1,73 @@
+
+
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+
+    <!-- The main content  -->
+    <div class="container">
+        <!-- Your page content goes here -->
+        <h1>Android Vulnerability Database CI/CD test</h1>
+
+        <div id="chart"></div>
+
+        <h1>Newly Added Vulnerabilities</h1>
+        <!-- Recent Vulnerabilities List -->
+        <div class="vulnerabilities">
+            <table>
+                <colgroup>
+                    <col width="21%">
+                    <col width="21%">
+                    <col width="14%">
+                    <col width="14%">
+                    <col width="30%">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>CVE</th>
+                        <th>Refrences</th>
+                        <th>Type</th>
+                        <th>Severity</th>
+                        <th scope="col">Updated AOSP versions</th>
+                    </tr>
+                    <tr>
+                        <td>CVE-2023-21245</td>
+                        <td>
+                            <a href="https://android.googlesource.com/platform/frameworks/base/+/a33159e8cb297b9eee6fa5c63c0e343d05fad622" rel="noreferrer">A-222446076</a>
+                            <a href="https://android.googlesource.com/platform/frameworks/base/+/d42f8d774901e8bcdf2c83b61b01fad79ce2f69f" rel="noreferrer">2</a>
+                        </td>
+                        <td>EoP</td>
+                        <td>High</td>
+                        <td>11, 12, 12L, 13, 14</td>
+                    </tr>
+                    <tr>
+                        <td>CVE-2024-0015</td>
+                        <td><a href="https://android.googlesource.com/platform/frameworks/base/+/2ce1b7fd37273ea19fbbb6daeeaa6212357b9a70" rel="noreferrer">A-300090204</a></td>
+                        <td>EoP</td>
+                        <td>High</td>
+                        <td>11, 12, 12L, 13</td>
+                    </tr>
+                    <tr>
+                        <td>CVE-2024-0018</td>
+                        <td><a href="https://android.googlesource.com/platform/frameworks/av/+/bf6406041919f67219fd1829438dda28845d4c23" rel="noreferrer">A-300476626</a></td>
+                        <td>EoP</td>
+                        <td>High</td>
+                        <td>11, 12, 12L, 13, 14</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <!-- Add more vulnerability items as needed -->
+            <br>
+
+        </div>
+    </div>
+    
+{% endblock %} 
+
+
+
+
+
+
+

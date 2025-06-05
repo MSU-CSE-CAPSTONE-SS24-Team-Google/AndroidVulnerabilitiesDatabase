@@ -1,0 +1,154 @@
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-justify: justify;
+    background-color: #f5f5f5;
+}
+
+#chart {
+    width: 100%;
+    height: 300px;
+}
+
+.vulnerabilities {
+    max-height: 200px;
+
+    margin-top: 20px;
+}
+
+.vulnerability-item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+table {
+    border: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: 14px/20px var(--devsite-primary-font-family);
+    margin: 16px 0 15px;
+    width: 100%;
+}
+
+.vulnerability-container {
+    max-width: 800px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.vulnerability-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.vulnerability-content {
+    padding: 20px;
+}
+.vulnerability-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.vulnerability-field {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.value {
+    margin-left: 10px;
+}
+
+.basescore {
+    margin-left: 10px;
+    background-color: #FFFF00;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: SteelBlue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+/* Dashboard styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

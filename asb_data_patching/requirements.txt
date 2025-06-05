@@ -1,0 +1,8 @@
+pymysql
+sqlalchemy>=1.4.*
+cloud-sql-python-connector>=1.6.*
+google-cloud-storage>=2.14.*
+google-api-python-client>=1.7.12
+functions-framework==3.*
+requests>=2.31.*
+google-cloud-secret-manager

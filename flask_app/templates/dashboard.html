@@ -1,0 +1,79 @@
+{% extends 'shared/layout.html' %}
+
+{% block maincontent %}
+<!-- Include Google Charts library -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawCharts);
+
+    function drawCharts() {
+        // Generate random data for Chart 1
+        var data1 = google.visualization.arrayToDataTable([
+            ['Category', 'Percentage'],
+            ['Low', Math.random() * 100],
+            ['Medium', Math.random() * 100],
+            ['High', Math.random() * 100],
+            // Add more categories as needed
+        ]);
+
+        // Generate random data for Chart 2
+        var data2 = google.visualization.arrayToDataTable([
+            ['Category', 'Percentage'],
+            ['0.0-5.0', Math.random() * 100],
+            ['5.1-7.0', Math.random() * 100],
+            ['7.1-10', Math.random() * 100],
+            // Add more categories as needed
+        ]);
+
+        // Set options for both charts
+        var options = {
+            title: 'Android Security Bulletin Data',
+            pieHole: 0.4, // Make a donut chart (optional)
+        };
+
+        var options2 = {
+            title: 'NVD Data',
+            pieHole: 0.4, // Make a donut chart (optional)
+        };
+
+        // Instantiate and draw the charts
+        var chart1 = new google.visualization.PieChart(document.getElementById('Android Security Bulletin Data'));
+        chart1.draw(data1, options);
+
+        var chart2 = new google.visualization.PieChart(document.getElementById('NVD Data'));
+        chart2.draw(data2, options2);
+    }
+</script>
+<div class="container">
+    <h1>MySQL Dashboard</h1>
+    <div class="row">
+        <!-- Chart 1 Container -->
+        <div id="Android Security Bulletin Data" style="width: 400px; height: 300px;"></div>
+        <!-- Chart 2 Container -->
+        <div id="NVD Data" style="width: 400px; height: 300px;"></div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Column1</th>
+                <th>Column2</th>
+                <!-- Add more columns as needed -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row[0] }}</td>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[4] }}</td>
+                    
+                    <!-- Add more cells for additional columns -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %} 

@@ -1,0 +1,58 @@
+nav {
+    background-color: #a1c5ff;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+nav a:hover {
+    background-color: #3c78d8;
+    border-radius: 5px;
+}
+
+
+  
+nav a {
+text-decoration: none;
+color: #fff;
+padding: 10px;
+margin: 0 10px;
+font-weight: bold;
+}
+  
+
+  
+.logo {
+font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+margin-right: 15px;
+}
+
+.search-bar {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Style for the top image */
+#google-logo {
+    max-width: 200px; /* Set the maximum width for the image */
+    max-height: 100px; /* Set the maximum height for the image */
+}
+  

@@ -1,0 +1,6 @@
+Metadata-Version: 2.1
+Name: avd-etl-logging
+Version: 0.0.1
+Summary: A simple library that helps with the logging of etl actions within the android vulnerability database backend
+Author: Team Google 2024 - MSU CSE Captone - Brendan Wieferich
+Requires-Python: >=3.11
