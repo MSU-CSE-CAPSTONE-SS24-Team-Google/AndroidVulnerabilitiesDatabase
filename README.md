@@ -2,10 +2,6 @@
 
 NOTICE: This product uses the NVD API but is not endorsed or certified by the NVD.
 
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
 ## Deploying flask website locally
 Use docker-compose to host the web application locally by executing the following command from a terminal:
 This is the Flask API website. Deploy locally with a docker-compose to use the API locally.
@@ -25,46 +21,6 @@ gcloud app deploy --project=solid-gamma-411111
 When prompted for service name, press enter.
 When prompted for the region choose us-central1
 When prompted regarding unauthenticated invocations choose  y
-
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://gitlab.msu.edu/wiefer20/cse498-teamgoogle-ss24.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://gitlab.msu.edu/wiefer20/cse498-teamgoogle-ss24/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-
-
 
 ## Name
 Android Vulnerability Database
@@ -89,7 +45,7 @@ Angular Frontend App:
 
 Flask Backend:
     This project uses Flask to power the backend of our web application
-    Pyhton Download: https://www.python.org/downloads/
+    Python Download: https://www.python.org/downloads/
     Our app uses local host and cloud to run the backend
 
         Cloud Deploy: Please see the Google Cloud section for how to deploy
@@ -113,7 +69,7 @@ Frederick Fan : fanfrede@msu.edu
 Brendan Wieferich : wiefer20@msu.edu
 
 ## Project status
-This project was completed the MSU Capstone Team Google
+This project was completed by the MSU Capstone Team Google
 
 ## ETL Processes
 
